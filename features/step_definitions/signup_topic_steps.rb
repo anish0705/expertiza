@@ -6,13 +6,13 @@ And /^Given that assignment Test Student Signup is listed$/ do
      click_link 'Accept'
   end
 
-  should have_link "Test Student Signup"
+  should have_link "Test.rb Student Signup"
 
 end
 
 Then /^I click the Test Student Signup link$/ do
-  should have_link "Test Student Signup"
-  click_link "Test Student Signup"
+  should have_link "Test.rb Student Signup"
+  click_link "Test.rb Student Signup"
 end
 
 Then /^I click the Signup sheet link$/ do

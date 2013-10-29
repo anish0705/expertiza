@@ -36,7 +36,7 @@ class Response < ActiveRecord::Base
     end
     code += '<div id="review_'+str+'" style=""><BR/><BR/>'
 
-    # Test for whether custom rubric needs to be used
+    # Test.rb for whether custom rubric needs to be used
     if ((self.map.questionnaire.section.eql? "Custom") && (self.map.type.to_s != 'FeedbackResponseMap'))
       #return top of view
       return code

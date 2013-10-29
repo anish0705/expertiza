@@ -34,7 +34,7 @@ class MenuUpdateTreeDisplay < ActiveRecord::Migration
      if action == nil
        action = ControllerAction.create(:name => 'list_surveys', :site_controller_id => site_controller.id)
      end
-     menuParent = MenuItem.create(:parent_id => menuParent.id, :name => 'Statistical Test', :label => 'Statistical Test', :seq => 3, :controller_action_id =>action.id )
+     menuParent = MenuItem.create(:parent_id => menuParent.id, :name => 'Statistical Test.rb', :label => 'Statistical Test.rb', :seq => 3, :controller_action_id =>action.id )
      
      site_controller = SiteController.find_or_create_by_name('tree_display')
      site_controller.permission_id = permission1.id

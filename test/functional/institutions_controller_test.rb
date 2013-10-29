@@ -38,11 +38,11 @@ class InstitutionsControllerTest < ActionController::TestCase
   # 403 Add a new institution with a name that already exists.
   def test_add_institution_with_duplicate_name
     number_of_institution = Institution.count
-    assert_equal 1, Institution.count(:all, :conditions => "name = 'Test state university'");
-    post :create, :institution => { :name => 'Test state university'}
+    assert_equal 1, Institution.count(:all, :conditions => "name = 'Test.rb state university'");
+    post :create, :institution => { :name => 'Test.rb state university'}
     assert_template 'institution/new'
     assert_equal Institution.count, number_of_institution
-    assert_equal 1, Institution.count(:all, :conditions => "name = 'Test state university'");
+    assert_equal 1, Institution.count(:all, :conditions => "name = 'Test.rb state university'");
   end
   
   # 404 Edit the name of a institution
@@ -69,7 +69,7 @@ class InstitutionsControllerTest < ActionController::TestCase
     number_of_institution = Institution.count
     post :update,:id => institutions(:institution0).id, :institution => { :name => institutions(:institution1).name}
     assert_equal Institution.count, number_of_institution
-    assert_equal 1, Institution.count(:all, :conditions => "name = 'Test state university'");
+    assert_equal 1, Institution.count(:all, :conditions => "name = 'Test.rb state university'");
     assert Institution.find(:all, :conditions => "name = 'Computer Science'").count == 0;
   end
   

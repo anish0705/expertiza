@@ -61,6 +61,7 @@ class WordnetBasedSimilarity
       revStem = find_stem_word(revToken, speller)     
       #fetching all the relations
       review_relations = get_relations_for_review_submission_tokens(revToken, revStem, reviewPOS)
+
       #setting the values in specific array variables
       revGloss = review_relations[0]
       revSyn =review_relations[1]
@@ -84,7 +85,7 @@ class WordnetBasedSimilarity
         end
         
         subToken = stokSub[j].downcase()
-        if(submPOS.empty?)#do not reset POS for every new token, it changes the POS of the vertex e.g. like has diff POS for vertices "like"(n) and "would like"(v)
+    +    if(submPOS.empty?)#do not reset POS for every new token, it changes the POS of the vertex e.g. like has diff POS for vertices "like"(n) and "would like"(v)
           submPOS = determine_POS(submVertex).strip
         end
         

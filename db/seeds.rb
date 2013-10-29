@@ -215,7 +215,7 @@ MenuItem.create(:parent_id => MenuItem.find_by_name('setup').id, :name => 'setup
   :controller_action_id => ControllerAction.find_by_site_controller_id_and_name(SiteController.find_by_name('menu_items').id, 'list').id)
 MenuItem.create(:parent_id => MenuItem.find_by_name('setup').id, :name => 'setup/system_settings', :label => 'System Settings', :seq => 7, :content_page_id => nil, 
   :controller_action_id => ControllerAction.find_by_site_controller_id_and_name(SiteController.find_by_name('system_settings').id, 'list').id)
-MenuItem.create(:parent_id => MenuItem.find_by_name('Survey Deployments').id, :name => 'Statistical Test', :label => 'Statistical Test', :seq => 3, :content_page_id => nil, 
+MenuItem.create(:parent_id => MenuItem.find_by_name('Survey Deployments').id, :name => 'Statistical Test.rb', :label => 'Statistical Test.rb', :seq => 3, :content_page_id => nil,
   :controller_action_id => ControllerAction.find_by_site_controller_id_and_name(SiteController.find_by_name('statistics').id, 'list_surveys').id)
 MenuItem.create(:parent_id => MenuItem.find_by_name('manage instructor content').id, :name => 'manage/users', :label => 'Users', :seq => 1, :content_page_id => nil, 
   :controller_action_id => ControllerAction.find_by_site_controller_id_and_name(SiteController.find_by_name('users').id, 'list').id)

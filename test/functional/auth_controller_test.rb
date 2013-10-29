@@ -50,14 +50,14 @@ class AuthControllerTest < ActionController::TestCase
     assert_redirected_to '/'
   end  
   
-  # Test for accessing an authorized page
+  # Test.rb for accessing an authorized page
   def test_authorized
     post :login, :login => {:name => users(:superadmin).name, :password => users(:superadmin).name}
     params = {:controller => 'impersonate', :action => 'start'}
     assert AuthController.authorised?(@response.session, params)
   end
 
-  # Test for accessing an unauthorized page
+  # Test.rb for accessing an unauthorized page
   def test_unauthorized
     post :login, :login => {:name => users(:student1).name, :password => users(:student1).name}
     params = {:controller => 'impersonate', :action => 'start'}

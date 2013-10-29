@@ -3,7 +3,7 @@ require File.dirname(__FILE__) + '/../test_helper'
 class RoleTest < ActiveSupport::TestCase
   fixtures :roles
   
-  # Test user retrieval by email
+  # Test.rb user retrieval by email
   def test_get_parents_includes_self
     roles = Role.all
     roles.each do |role|

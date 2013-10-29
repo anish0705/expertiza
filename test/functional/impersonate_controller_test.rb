@@ -11,14 +11,14 @@ class ImpersonateController; def rescue_action(e) raise e end; end
 class ImpersonateControllerTest < ActionController::TestCase
   fixtures :users, :roles, :system_settings
 
-  # puts "Now entering ImpersonateController Test...."
+  # puts "Now entering ImpersonateController Test.rb...."
   set_fixture_class :system_settings => 'SystemSettings'    
   fixtures :system_settings
   fixtures :content_pages  
   @settings = SystemSettings.find(:first)
   
   def setup
-  # puts "Now entering ImpersonateController Test .... setup method ...."  
+  # puts "Now entering ImpersonateController Test.rb .... setup method ...."
     @controller = ImpersonateController.new  
     @request    = ActionController::TestRequest.new
     @response   = ActionController::TestResponse.new
@@ -35,7 +35,7 @@ class ImpersonateControllerTest < ActionController::TestCase
       
     AuthController.set_current_role(roleid,@request.session) 
 
-  # puts "Now exiting ImpersonateController Test .... setup method ...."
+  # puts "Now exiting ImpersonateController Test.rb .... setup method ...."
   end
   
   def test_start

@@ -34,7 +34,7 @@ class AssignmentControllerTest < ActionController::TestCase
     #   @request.session[:user] = User.find_by_name("suadmin")
   end
 
-  # Test Case 1101
+  # Test.rb Case 1101
   def test_new
     questionnaire_id = Questionnaire.first.id
     instructorid = Instructor.first.id
@@ -54,7 +54,7 @@ class AssignmentControllerTest < ActionController::TestCase
     assert assignment.save
   end
   
-  # Test Case 1101-A
+  # Test.rb Case 1101-A
   def test_copy
     # copy an assignment
 
@@ -69,7 +69,7 @@ class AssignmentControllerTest < ActionController::TestCase
     assert Dir[dir].empty?
   end
 
-# Test Case 1101B
+# Test.rb Case 1101B
   def test_new_microtask
     questionnaire_id = Questionnaire.first.id
     instructorid = Instructor.first.id
@@ -142,7 +142,7 @@ class AssignmentControllerTest < ActionController::TestCase
 
 
   end
-  # Test Case 1102
+  # Test.rb Case 1102
   # edit an assignment, change should be
   # reflected in DB
   def test_legal_edit_assignment
@@ -178,7 +178,7 @@ class AssignmentControllerTest < ActionController::TestCase
     assert Assignment.find(:all, :conditions => "name = 'updatedAssignment9'")
   end
 
-  # Test Case 1103
+  # Test.rb Case 1103
   # illegally edit an assignment, name the existing
   # assignment with an invalid name or another existing
   # assignment name, should not be allowed to changed DB data

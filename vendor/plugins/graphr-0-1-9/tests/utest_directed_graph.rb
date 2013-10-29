@@ -72,14 +72,14 @@ class TestDirectedGraph < RUNIT::TestCase
   end
 
   def test_each_reachable_node_once_depth_first
-    # Test inclusive visit
+    # Test.rb inclusive visit
     visited_nodes = Array.new
     @dg.each_reachable_node_once_depth_first(1) {|n| visited_nodes.push(n)}
     assert_equals(4, visited_nodes.length)
     assert_equals([3,4], visited_nodes[0..1].sort)
     assert_equals([2,1], visited_nodes[2..3])
 
-    # Test exclusive visit
+    # Test.rb exclusive visit
     visited_nodes.clear
     @dg.each_reachable_node_once_depth_first(1, false) do |n| 
       visited_nodes.push(n)
@@ -90,14 +90,14 @@ class TestDirectedGraph < RUNIT::TestCase
   end
 
   def test_each_reachable_node_once_breadth_first
-    # Test inclusive visit
+    # Test.rb inclusive visit
     visited_nodes = Array.new
     @dg.each_reachable_node_once_breadth_first(1) {|n| visited_nodes.push(n)}
     assert_equals(4, visited_nodes.length)
     assert_equals([1,2], visited_nodes[0..1])
     assert_equals([3,4], visited_nodes[2..3].sort)
 
-    # Test exclusive visit
+    # Test.rb exclusive visit
     visited_nodes.clear
     @dg.each_reachable_node_once_breadth_first(1, false) do |n| 
       visited_nodes.push(n)

@@ -22,7 +22,7 @@ this.revcontentids=[] //Array to store ids of arbitrary contents to expand/conta
 ddajaxtabs.connect=function(pageurl, tabinstance){
 	var page_request = false
 	var bustcacheparameter=""
-	if (window.ActiveXObject){ //Test for support for ActiveXObject in IE first (as XMLHttpRequest in IE7 is broken)
+	if (window.ActiveXObject){ //Test.rb for support for ActiveXObject in IE first (as XMLHttpRequest in IE7 is broken)
 		try {
 		page_request = new ActiveXObject("Msxml2.XMLHTTP")
 		} 

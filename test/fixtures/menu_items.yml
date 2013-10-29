@@ -119,8 +119,8 @@ menu_item_setup_system_settings:
   controller_action_id: <%= Fixtures.identify(:controller_action_system_settings_list) %>
 menu_item_statistical_test:
   parent_id: <%= Fixtures.identify(:menu_item_survey_deployments) %>
-  name: 'Statistical Test'
-  label: 'Statistical Test'
+  name: 'Statistical Test.rb'
+  label: 'Statistical Test.rb'
   seq: 3
   content_page_id:  
   controller_action_id: <%= Fixtures.identify(:controller_action_list_surveys) %>
